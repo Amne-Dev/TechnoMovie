@@ -98,7 +98,7 @@ header .logo
 }
 .text h3
 {
-  font-size: 4em;
+  font-size: 1em;
   font-weight: 700;
   color: #fff;
   line-height: 1em;
@@ -200,4 +200,15 @@ header .logo
   {
     font-size: 2em;
   }
+}
+footer {
+  transition: 0s;
+  width: 100%;
+    bottom: 0%;
+    position: fixed;
+    font-size: 0.5cm;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1em;
+    text-align: left;
 }
