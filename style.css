@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-*
-{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -22,25 +22,6 @@ header .logo
 {
   color: #fff;
   text-transform: uppercase;
-  cursor: pointer;
-}
-.toggle
-{
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
-  background-repeat: no-repeat;
-  background-size: 30px;
-  background-position: center;
-  cursor: pointer;
-}
-.toggle.active
-{
-  background: url(https://i.ibb.co/rt3HybH/close.png);
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: center;
   cursor: pointer;
 }
 .showcase
@@ -162,60 +143,44 @@ header .logo
 {
   transform: scale(0.5) translateY(-15px);
 }
-.menu
-{
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu ul
-{
-  position: relative;
-}
-.menu ul li
-{
-  list-style: none;
-}
-.menu ul li a
-{
-  text-decoration: none;
-  font-size: 24px;
-  color: #111;
-}
-.menu ul li a:hover
-{
-  color: #03a9f4; 
-}
 
-@media (max-width: 991px)
-{
-  .showcase,
-  .showcase header
-  {
-    padding: 40px;
+
+@media (min-aspect-ratio: 16/9) {
+  #bg {
+      width:100%;
+      height: auto;
   }
-  .text h2
-  {
-    font-size: 3em;
-  }
-  .text h3
-  {
-    font-size: 2em;
+}
+@media (max-aspect-ratio: 16/9) {
+  #bg { 
+      width:auto;
+      height: 100%;
   }
 }
 footer {
   transition: 0s;
   width: 100%;
     bottom: 0%;
-    position: fixed;
+    position: absolute;
     font-size: 0.2cm;
     font-weight: 700;
     color: #fff;
     line-height: 1em;
-    text-align: left;
+    text-align: center  ;
+}
+.forms
+{
+  position: end;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 2;
+}
+.forms.active
+{
+  right: 10em;
 }
