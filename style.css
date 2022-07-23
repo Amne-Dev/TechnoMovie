@@ -37,6 +37,7 @@ header .logo
   background: #111;
   transition: 0.5s;
   z-index: 2;
+  overflow: hidden;
 }
 .showcase.active
 {
@@ -52,7 +53,6 @@ header .logo
   height: 100%;
   object-fit: cover;
   opacity: 0.8;
-  overflow: hidden;
 }
 .overlay
 {
