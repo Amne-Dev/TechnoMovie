@@ -37,7 +37,7 @@ header .logo
   background: #111;
   transition: 0.5s;
   z-index: 2;
-  overflow: hidden;
+
 }
 .showcase.active
 {
@@ -63,6 +63,7 @@ header .logo
   height: 100%;
   background: rgb(97, 77, 77);
   mix-blend-mode: overlay;
+  z-index: 99;
 }
 .text
 {
@@ -146,51 +147,36 @@ header .logo
 }
 
 
-@media (min-aspect-ratio: 16/9) {
-  #bg {
-      width:100%;
-      height: auto;
-  }
-}
-@media (max-aspect-ratio: 16/9) {
-  #bg { 
-      width:auto;
-      height: 100%;
-  }
-}
 footer {
-  transition: 0s;
   width: 100%;
-    bottom: 0%;
+    bottom: 0;
     position: absolute;
     font-size: 0.2cm;
     font-weight: 700;
     color: #fff;
+    background-color: rgb(36, 37, 66);
     line-height: 1em;
     text-align: center  ;
+    min-height: 0.5cm;
 }
 .forms
 {
   position: absolute;
   width: 100%;
   height: auto;
-  display: block;
+  display: Block;
   justify-content: space-between;
   align-items: center;
   background: rgb(36, 37, 66);
   transition: 0.5s;
-  z-index: 2;
+  z-index: 20;
   bottom: 0;
   text-align: center;
   color: aliceblue;
   text-decoration: none;
-  
-  
+  opacity: 1;
 }
-.forms.active
-{
-  right: 10em;
-}
+
 
 .text-forms a
 {
@@ -205,8 +191,16 @@ footer {
   color: #111;
   letter-spacing: 2px;
   transition: 0.2s;
+  z-index: 100;
 }
 .text-forms a:hover
 {
   letter-spacing: 6px;
+}
+
+@media (max-width: 991px)
+{
+  * {
+    transform: scale(105%);
+  }
 }
