@@ -201,6 +201,6 @@ footer {
 @media (max-width: 991px)
 {
   * {
-    transform: scale(105%);
+    transform: scale(50px);
   }
 }
