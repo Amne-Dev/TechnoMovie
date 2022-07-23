@@ -198,9 +198,3 @@ footer {
   letter-spacing: 6px;
 }
 
-@media (max-width: 991px)
-{
-  * {
-    transform: scale(50px);
-  }
-}
