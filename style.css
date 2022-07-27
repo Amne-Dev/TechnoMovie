@@ -198,3 +198,7 @@ footer {
   letter-spacing: 6px;
 }
 
+div.text-forms{
+  overflow: auto;
+  max-height: 105px;
+}
