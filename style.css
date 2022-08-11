@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-
-* {
+@import url('https://fontlibrary.org//face/minecraft');
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'MinecrafterAltRegular', sans-serif;
+  scroll-behavior: smooth;
+  text-shadow: #1e1e26;
+
 }
-header
-{
+header{
   position: absolute;
   top: 0;
   left: 0;
@@ -17,15 +18,25 @@ header
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: visible;
 }
-header .logo
-{
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
+body{
+  overflow: visible ;
+  scroll-behavior: smooth;
+  background: #1e1e26
 }
-.showcase
-{
+.logo{
+  margin-top: 1em;
+  transform: scale(75%);
+  position: relative;
+  z-index: 10;
+  opacity: 1;
+  top: 0;
+}
+nav{
+  flex: 1;
+}
+.showcase{
   position: absolute;
   right: 0;
   width: 100%;
@@ -37,10 +48,11 @@ header .logo
   background: #111;
   transition: 0.5s;
   z-index: 2;
-
+  overflow: visible;
+  background: #1e1e26;
+  
 }
-.showcase.active
-{
+.showcase.active{
   right: 300px;
 }
 
@@ -53,7 +65,7 @@ header .logo
   height: 100%;
   object-fit: cover;
   opacity: 0.8;
-  z-index: -2;
+  z-index: -1;
 }
 .overlay
 {
@@ -62,38 +74,42 @@ header .logo
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(97, 77, 77);
+  background: rgb(90, 56, 69);
   mix-blend-mode: overlay;
 }
 .text
 {
   position: relative;
   z-index: 10;
+  transform: scale(65%);
+  cursor: default;
+  width: 100%;
 }
+
 
 .text h2
 {
   font-size: 5em;
-  font-weight: 800;
+  font-weight: bold;
   color: #fff;
   line-height: 1em;
   text-transform: uppercase;
 }
 .text h3
 {
-  font-size: 1em;
-  font-weight: 700;
+  font-size: 4em;
+  font-weight: normal;
   color: #fff;
   line-height: 1em;
   text-transform: uppercase;
 }
 .text p
 {
-  font-size: 1.1em;
+  font-size: 2em;
   color: #fff;
   margin: 20px 0;
-  font-weight: 400;
-  max-width: 700px;
+  font-weight: lighter;
+  width: 700px;
 }
 .text a
 {
@@ -108,97 +124,157 @@ header .logo
   color: #111;
   letter-spacing: 2px;
   transition: 0.2s;
+  border-radius: 15px;
+
 }
 .text a:hover
 {
   letter-spacing: 6px;
 }
-.social
-{
-  position: absolute;
-  z-index: 10;
-  right: 20px;
-  top: 20px;
+.navbar{
+  width: 100%;
+  height: 60px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-decoration: none;
-  font-size: 0.5cm;
-  text-transform: uppercase;
-  font-family: serif;
-  color: #fff;
-  line-height: 1em;
 }
-.social li
-{
-  list-style: none;
-}
-.social li a
-{
-  display: inline-block;
-  margin-right: 20px;
-  filter: invert(1);
-  transform: scale(0.5);
-  transition: 0.5s;
-}
-.social li a:hover
-{
-  transform: scale(0.5) translateY(-15px);
-}
-
-
-footer {
-  width: 100%;
-    bottom: 0;
+.pagelogo {
+  transform: scale(60%);
     position: absolute;
-    font-size: 0.2cm;
-    font-weight: 700;
-    color: #fff;
-    background-color: rgb(36, 37, 66);
-    line-height: 1em;
-    text-align: center  ;
-    min-height: 0.5cm;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+  z-index: 3;
 }
-.forms
-{
-  position: absolute;
+.text h1 :hover{
+
+  scale: 1.5;
+  }
+.contact {
+    position: absolute;
+    right: 8em;
+    text-decoration: none;
+    color: aliceblue;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+.contact:hover{
+  transition-duration: 1s;
+  transform: scale(125%);
+}
+
+.copyright {
   width: 100%;
-  height: auto;
-  display: Block;
-  justify-content: space-between;
-  align-items: center;
-  background: rgb(36, 37, 66);
-  transition: 0.5s;
-  z-index: 20;
+  align-items: bottom;
+  position: absolute;
+  text-align: left;
   bottom: 0;
-  text-align: center;
-  color: aliceblue;
-  text-decoration: none;
-  opacity: 1;
+  display: block;
+  z-index: 5;
+  background-color: rgba(240, 248, 255, 0.521);
+  font-size: small;
+  font-weight:500 ;
+  height: 40px;
 }
 
-
-.text-forms a
-{
-  display: inline-block;
-  font-size: 1em;
-  background: aliceblue;
-  padding: 10px 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 10px;
-  color: #111;
-  letter-spacing: 2px;
-  transition: 0.2s;
-  z-index: 100;
-}
-.text-forms a:hover
-{
-  letter-spacing: 6px;
+#footerpic {
+  transform: scale(75%);
+  position: absolute;
+  right: 0; 
+  bottom: 6px;
 }
 
-div.text-forms{
-  overflow: auto;
-  max-height: 105px;
+#slider{
+  display: block;
+
 }
+
+.msg-container{
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  transform: translateY(-25%);
+  top: 57%;
+  ;
+}
+
+.msg-col{
+  width: 900px;
+  height: 400px;
+  margin-bottom: 400px;
+}
+  
+.controller{
+  width: 1px;
+  height: 320px;
+  display: block;
+  background: #f0f8ff;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+}
+
+#A1,#A2{
+  width: 100%;
+  background: #1e1e26;
+  
+}
+#PA1,#PA2,#PA3{
+  height: 350px;
+  width: 100%;
+  background: #1e1e26;
+}
+
+.reset{
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 10px;
+  z-index: 99;
+  background: #f0f8ff;
+  margin: 10px;
+  opacity: 45%;
+  border: none;
+  outline: none;
+
+}
+
+.reset:hover{
+  opacity: 100%;
+}
+
+.top{
+  height: 5px;
+  top: 0;
+  z-index: -2;
+  margin-top: 0;
+}
+
+@media (max-width: 991px){
+    .showcase,
+    .showcase header
+    {
+      padding: 40px;
+    }
+    .text h2
+    {
+      font-size: 3em;
+    }
+    .text h2 :hover{
+      scale: 1.5;
+    }
+    .text h3
+    {
+      font-size: 2em;
+    }
+    .contact {
+   display: none;
+    }
+
+  }
