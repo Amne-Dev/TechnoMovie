@@ -23,7 +23,8 @@ header{
 body{
   overflow: visible ;
   scroll-behavior: smooth;
-  background: #1e1e26
+  background: #1e1e26;
+  
 }
 .logo{
   margin-top: 1em;
@@ -45,7 +46,6 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
   transition: 0.5s;
   z-index: 2;
   overflow: visible;
@@ -58,7 +58,7 @@ nav{
 
 .showcase video
 {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -69,12 +69,12 @@ nav{
 }
 .overlay
 {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(90, 56, 69);
+  background: rgb(75, 46, 57);
   mix-blend-mode: overlay;
 }
 .text
@@ -84,6 +84,7 @@ nav{
   transform: scale(65%);
   cursor: default;
   width: 100%;
+  text-shadow: #1e1e26;
 }
 
 
@@ -91,7 +92,7 @@ nav{
 {
   font-size: 5em;
   font-weight: bold;
-  color: #fff;
+  color: rgb(216, 216, 216);
   line-height: 1em;
   text-transform: uppercase;
 }
@@ -137,17 +138,7 @@ nav{
   display: flex;
   align-items: center;
 }
-.pagelogo {
-  transform: scale(60%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-  z-index: 3;
-}
+
 .text h1 :hover{
 
   scale: 1.5;
@@ -201,7 +192,7 @@ nav{
 }
 
 .msg-col{
-  width: 900px;
+  width: 100%;
   height: 400px;
   margin-bottom: 400px;
 }
@@ -219,34 +210,14 @@ nav{
 
 #A1,#A2{
   width: 100%;
-  background: #1e1e26;
+  background: none;
   
 }
+
 #PA1,#PA2,#PA3{
   height: 350px;
   width: 100%;
-  background: #1e1e26;
-}
-
-.reset{
-  display: none;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  height: 32px;
-  width: 32px;
-  border-radius: 10px;
-  z-index: 99;
-  background: #f0f8ff;
-  margin: 10px;
-  opacity: 45%;
-  border: none;
-  outline: none;
-
-}
-
-.reset:hover{
-  opacity: 100%;
+  background: none;
 }
 
 .top{
@@ -255,6 +226,11 @@ nav{
   z-index: -2;
   margin-top: 0;
 }
+
+#PA3{
+  height: 1px;
+}
+
 
 @media (max-width: 991px){
     .showcase,
