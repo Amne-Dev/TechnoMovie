@@ -1,4 +1,13 @@
 @import url('https://fontlibrary.org//face/minecraft');
+
+#desktop{
+  display: block;
+}
+
+#mobile{
+  display: none;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -74,12 +83,13 @@ nav{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(75, 46, 57);
-  mix-blend-mode: overlay;
+  background: rgba(92, 23, 48, 0.555);
+  mix-blend-mode: normal;
+  opacity: 0.6;
 }
 .text
 {
-  position: relative;
+  position: absolute;
   z-index: 10;
   transform: scale(65%);
   cursor: default;
@@ -231,30 +241,106 @@ nav{
   height: 1px;
 }
 
+.mobile-text
+{
+  margin-top: 300px;
+  margin-bottom: 200px;
+  position: absolute;
+  z-index: 10;
+  transform: scale(185%);
+  cursor: default;
+  width: 100%;
+  text-shadow: #1e1e26;
+  translate: 50%;
+  text-align: left;
+}
+
+
+.mobile-text h2
+{
+  font-size: 5em;
+  font-weight: bold;
+  color: rgb(216, 216, 216);
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.mobile-text h3
+{
+  font-size: 4em;
+  font-weight: normal;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+  max-width: 700px;
+}
+.mobile-text p
+{
+  font-size: 2em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: lighter;
+  width: 700px;
+}
+.mobile-text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  border-radius: 15px;
+  text-align: left;
+  translate: 25%;
+  scale: 1.5;
+
+}
+.mobile-text a:hover
+{
+  letter-spacing: 6px;
+}
+
+#MPA1,#MPA2,#MPA3{
+  display: block;
+  height: 600px;
+  background: none;
+}
 
 @media (max-width: 991px){
-    .showcase,
-    .showcase header
-    {
-      padding: 40px;
-    }
-    .text h2
-    {
-      font-size: 3em;
-    }
-    .text h2 :hover{
-      scale: 1.5;
-    }
-    .text h3
-    {
-      font-size: 2em;
-    }
-    .contact {
-   display: none;
-    }
-
-   .controller{
-    display: none;
-   } 
-
+  #mobile {
+    display: block;
   }
+  #desktop{
+    display: none;
+}
+.logo{
+  scale: 150%;
+  translate: 200%;
+  transform: translateY(50%);
+}
+.contact{
+  display: none;
+}
+
+.msg-container{
+  width: 700px;
+  height: 400px;
+  position: absolute;
+  transform: translateY(-25%);
+  top: 57%;
+  ;
+}
+
+.msg-col{
+  width: 700px;
+  height: 400px;
+  margin-bottom: 400px;
+}
+  
+
+}
