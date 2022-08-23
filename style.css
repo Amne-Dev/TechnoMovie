@@ -37,11 +37,13 @@ body{
 }
 .logo{
   margin-top: 1em;
-  transform: scale(75%);
+  scale: 75%;
   position: relative;
   z-index: 10;
   opacity: 1;
   top: 0;
+  transform: translateX(-15%);
+
 }
 nav{
   flex: 1;
@@ -62,7 +64,7 @@ nav{
   
 }
 .showcase.active{
-  right: 300px;
+  right: &00px;
 }
 
 .showcase video
