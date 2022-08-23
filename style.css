@@ -64,7 +64,7 @@ nav{
   
 }
 .showcase.active{
-  right: &00px;
+  right: 300px;
 }
 
 .showcase video
@@ -85,9 +85,9 @@ nav{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(92, 23, 48, 0.555);
+  background: #771e1eb6;
   mix-blend-mode: normal;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 .text
 {
