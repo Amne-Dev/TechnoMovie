@@ -67,7 +67,7 @@ nav{
   right: 300px;
 }
 
-.showcase video
+.showcase img
 {
   position: fixed;
   top: 0;
@@ -96,7 +96,8 @@ nav{
   transform: scale(65%);
   cursor: default;
   width: 100%;
-  text-shadow: #1e1e26;
+  text-shadow: #1e1e26 1px 1px;
+
 }
 
 
@@ -322,7 +323,7 @@ nav{
 }
 .logo{
   scale: 150%;
-  translate: 200%;
+  translate: 25%;
   transform: translateY(50%);
 }
 .contact{
@@ -330,7 +331,7 @@ nav{
 }
 
 .msg-container{
-  width: 700px;
+  width: 60%;
   height: 400px;
   position: absolute;
   transform: translateY(-25%);
@@ -339,7 +340,7 @@ nav{
 }
 
 .msg-col{
-  width: 700px;
+  width: 60%;
   height: 400px;
   margin-bottom: 400px;
 }
